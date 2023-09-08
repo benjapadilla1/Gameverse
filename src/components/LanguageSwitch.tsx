@@ -10,7 +10,7 @@ const LanguageSwitch: React.FC<LanguageSwitchProps> = ({
   currentLanguage,
 }) => {
   return (
-    <div className="flex gap-5 items-end">
+    <div className="flex gap-5 justify-center">
       <button
         onClick={() => onChangeLanguage("en")}
         disabled={currentLanguage === "en"}
