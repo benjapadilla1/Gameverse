@@ -1,15 +1,25 @@
-const LanguageSwitch = () => {
+import React from "react";
+
+interface LanguageSwitchProps {
+  onChangeLanguage: (language: string) => void;
+  currentLanguage: string;
+}
+
+const LanguageSwitch: React.FC<LanguageSwitchProps> = ({
+  onChangeLanguage,
+  currentLanguage,
+}) => {
   return (
-    <div className="flex gap-5 items-end ">
+    <div className="flex gap-5 items-end">
       <button
-      // onClick={() => changeLanguage("en")} // Cambiar a inglés
-      // disabled={currentLanguage === "en"}
+        onClick={() => onChangeLanguage("en")}
+        disabled={currentLanguage === "en"}
       >
         English
       </button>
       <button
-      // onClick={() => changeLanguage("es")} // Cambiar a español
-      // disabled={currentLanguage === "es"}
+        onClick={() => onChangeLanguage("es")}
+        disabled={currentLanguage === "es"}
       >
         Español
       </button>
